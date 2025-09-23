@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  display: flex;
+}
+
+.left {
+  width: 30vw;
+  border-radius: 10px;
+  margin: 5px;
+  gap: 10px;
+}
+
+.topleft {
+  height: 20vh;
+  background-color: #222222;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  color: white;
+  display: flex;
+  gap: 15px;
+  padding: 12px 5px 12px 20px;
+  font-size: 30px;
+}
+/* 
+.home{
+    color: white;
+    display: flex;
+    gap: 15px;
+    padding: 12px 5px 12px 20px;
+} */
+
+.home {
+  color: white;
+  display: flex;
+  gap: 15px;
+  padding: 12px 5px 12px 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #222; /* Optional base background */
+  /* border-radius: 8px;      Optional rounded corners */
+}
+
+/* Glowing gradient overlay */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+/* On hover, animate the glow from left to right */
+.home:hover::before {
+  left: 0;
+}
+
+/* .search{
+    color: white;
+    display: flex;
+    gap: 15px;
+    padding: 12px 5px 12px 20px;
+}
+
+.search:hover{
+    
+} */
+.search {
+  color: white;
+  display: flex;
+  gap: 15px;
+  padding: 12px 5px 12px 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+  /* border-radius: 8px;       */
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.search:hover::before {
+  left: 0;
+}
+
+.bottomleft {
+  height: 80vh;
+  background-color: #222222;
+  border-radius: 10px;
+}
+
+.lib {
+  color: white;
+  display: flex;
+  gap: 15px;
+  padding: 12px 5px 12px 20px;
+}
+
+.musicplay {
+  color: white;
+  margin: 15px;
+  width: 90%;
+
+}
+
+.musicplay ul {
+  padding: 0px 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 444px;
+
+  /* Firefox */
+  scrollbar-width: none; /* hide scrollbar by default */
+}
+
+/* Chrome, Edge, Safari */
+.musicplay ul::-webkit-scrollbar {
+  width: 8px;
+  opacity: 0;             /* hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.musicplay ul::-webkit-scrollbar-track {
+  background: transparent; /* fully invisible track */
+}
+
+.musicplay ul::-webkit-scrollbar-thumb {
+  background: #000;        /* black thumb */
+  border-radius: 8px;
+}
+
+/* Show scrollbar on hover */
+.musicplay ul:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.musicplay ul li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  padding: 10px;
+  /* width: 390px; */
+  margin: 20px 0px;
+}
+
+/* .music {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  padding: 10px;
+  width: 390px;
+  margin: 20px 0px;
+} */
+
+.naam{
+  font-size: 12px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+
+.musicplay ul li:hover {
+  background-color: #0d0d0d;
+  transition: ease-in 0.6s;
+}
+
+.playnow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.playnow svg {
+  color: #c0bebe;
+  transition: all 0.4s ease-in-out;
+}
+
+li:hover svg {
+  color: #1ed760;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.right {
+  width: 70vw;
+  border-radius: 10px;
+  margin: 5px 5px 5px 0px;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  background-color: #222222;
+  height: 6vh;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.sign {
+  background-color: #222222;
+  width: 80px;
+  padding: 5px;
+  margin-right: 10px;
+  /* background-color: #222222; */
+  color: rgb(85, 84, 84);
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sign:hover {
+  color: darkgrey;
+  transition: ease-in-out 2s;
+}
+
+.sign:hover::before {
+  color: #222222;
+  transition: ease-in-out 2s;
+}
+
+.btn {
+  background-color: #222222;
+  width: 80px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  /* Create a gradient background that is twice as wide as the button */
+  background-image: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+
+  /* Position the gradient so the white part is visible initially */
+  background-position: right bottom;
+
+  /* Add transitions for a smooth effect */
+  transition: all 0.8s ease-out;
+}
+
+/* Hover state */
+.btn:hover {
+  /* Move the gradient to the left, revealing the black part */
+  background-position: left bottom;
+
+  /* Change the text color to white */
+  color: white;
+
+  /* Animate the border color for a complete effect */
+  border-color: white;
+}
+
+/* .btn:hover{
+    background-color: gainsboro;
+    scale: 1.1;
+    transition: 2s;
+} */
+
+.rightbottom {
+  height: 94vh;
+  background-color: #222222;
+  border-radius: 10px;
+  position: relative;
+}
+
+.title {
+  color: white;
+  gap: 15px;
+  padding: 12px 5px 12px 20px;
+}
+
+.playlist-container {
+  display: flex;
+  overflow-x: auto;   /* Enable horizontal scroll */
+  gap: 20px;          /* Spacing between playlists */
+  padding: 20px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  
+  /* Scrollbar for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #555 #121212;
+  scrollbar-width: none;
+}
+
+
+/* Scrollbar for Chrome, Edge, Safari */
+.playlist-container::-webkit-scrollbar {
+  height: 8px; /* horizontal scrollbar */
+  display: none;
+}
+
+.playlist-container::-webkit-scrollbar-track {
+  background: #121212; 
+  border-radius: 10px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 10px;
+}
+
+.playlist-container::-webkit-scrollbar-thumb:hover {
+  background: #1db954; /* Spotify green */
+}
+
+/* Playlist card size */
+.playlists {
+  flex: 0 0 200px; /* fixed width so multiple fit in a row */
+  background: #181818;
+  border-radius: 10px;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.playlists:hover {
+  background: #2a2a2a;
+}
+
+.img {
+  position: relative;
+}
+
+.playlists img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.playlists img:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.content h2 {
+  font-size: 16px;
+  margin: 8px 0 4px 0;
+  color: #fff;
+}
+
+.content p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+.playlists {
+  /* border: 2px solid black; */
+  width: 200px;
+  margin: 30px;
+  padding: 8px;
+}
+
+.playlists:hover {
+  background-color: #2a2a2a;
+  transition: ease-in-out 0.5s;
+}
+
+.playlists img {
+  width: 100%;
+  object-fit: contain;
+  /* position: relative; */
+}
+
+.img {
+  position: relative;
+
+}
+
+.playlists img:hover {
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.playbdmo {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* svg::before{
+  opacity: 0;
+} */
+
+.img:hover .playbdmo{
+  opacity: 1;
+  /* z-index: 1; */
+}
+
+.content {
+  color: white;
+}
+
+.content h2,
+p {
+  padding: 8px;
+}
+
+.musicbar{
+  background-color: #575656;
+  opacity: 0.6;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.controls{
+  display: flex;
+  justify-content: space-around;
+}
+
+.controls svg{
+  margin: 10px;
+  cursor: pointer;
+}
+
+.barr{
+  height: 4px;
+    width: 98%;
+    background: rgb(251, 250, 250);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -6px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.dot{
+  width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: rgb(255, 254, 254);
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+    cursor: pointer;
+}
+
+.controls img{
+  margin: 7px 10px;
+}
+
+.songkonsa{
+  width: 185px;
+  color: white;
+}
+
+.timekitna{
+  width: 185px;
+  color: white;
+  margin-top: 12px;
+}
+
+.hamburger{
+  display: none;
+}
+
+.close{
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .left{
+        position: absolute;
+        z-index: 1;
+        left: -120%;
+        transition: all 0.5s;
+        width: 340px;
+        border: 2px solid black;
+        background-color: #000;
+  }
+
+  .right{
+    width: 100vw;
+    margin: 0px;
+  }
+
+  .songkonsa{
+    font-size: 10px;
+    width: 90px;
+  }
+
+  .timekitna{
+    width: 90px;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .icc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}
