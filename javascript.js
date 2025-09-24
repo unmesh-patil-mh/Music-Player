@@ -17,7 +17,7 @@ function secondstominutes(seconds) {
 
 async function gettingMusic() {
   let a = await fetch(
-    "https://drive.google.com/drive/folders/1pJJ-YbIV1ATTN1ldjgTORx6Ae0Z3JGet?usp=drive_link"
+    "/songs"
   );
   let response = await a.text();
   // console.log(response);
@@ -37,7 +37,7 @@ async function gettingMusic() {
 
     if (text.endsWith(".mp3")) {
       // ✅ always rebuild clean URL
-      let cleanUrl = `https://drive.google.com/drive/folders/1pJJ-YbIV1ATTN1ldjgTORx6Ae0Z3JGet?usp=drive_link${encodeURIComponent(
+      let cleanUrl = `/songs${encodeURIComponent(
         text
       )}`;
       songs.push(cleanUrl.split("/songs/")[1].split("(")[0]);
@@ -199,6 +199,7 @@ async function main() {
 }
 
 main();
+
 
 
 
