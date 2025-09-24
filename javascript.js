@@ -17,7 +17,7 @@ function secondstominutes(seconds) {
 
 async function gettingMusic() {
   let a = await fetch(
-    "/songs/"
+    "https://github.com/unmesh-patil-mh/Music-Player/tree/main/songs"
   );
   let response = await a.text();
   // console.log(response);
@@ -37,7 +37,7 @@ async function gettingMusic() {
 
     if (text.endsWith(".mp3")) {
       // ✅ always rebuild clean URL
-      let cleanUrl = `/songs/${encodeURIComponent(
+      let cleanUrl = `https://github.com/unmesh-patil-mh/Music-Player/tree/main/songs${encodeURIComponent(
         text
       )}`;
       songs.push(cleanUrl.split("/songs/")[1].split("(")[0]);
@@ -199,4 +199,5 @@ async function main() {
 }
 
 main();
+
 
