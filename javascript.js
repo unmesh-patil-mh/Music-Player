@@ -17,7 +17,7 @@ function secondstominutes(seconds) {
 
 async function gettingMusic() {
   let a = await fetch(
-    "http://127.0.0.1:3000/web%20development/project/Music%20player%20clone/songs/"
+    "/songs/"
   );
   let response = await a.text();
   // console.log(response);
@@ -37,7 +37,7 @@ async function gettingMusic() {
 
     if (text.endsWith(".mp3")) {
       // ✅ always rebuild clean URL
-      let cleanUrl = `/web%20development/project/Music%20player%20clone/songs/${encodeURIComponent(
+      let cleanUrl = `/songs/${encodeURIComponent(
         text
       )}`;
       songs.push(cleanUrl.split("/songs/")[1].split("(")[0]);
@@ -199,3 +199,4 @@ async function main() {
 }
 
 main();
+
