@@ -37,7 +37,7 @@ async function gettingMusic() {
 
     if (text.endsWith(".mp3")) {
       // ✅ always rebuild clean URL
-      let cleanUrl = `songs${encodeURIComponent(
+      let cleanUrl = `http://127.0.0.1:3000/web%20development/project/Music%20player%20clone/songs/${encodeURIComponent(
         text
       )}`;
       songs.push(cleanUrl.split("/songs/")[1].split("(")[0]);
@@ -50,7 +50,7 @@ gettingMusic();
 
 const playmusic = (track , pause =false) => {
   // let audio = new Audio("songs/" + track);
-  currentSongs.src = "songs/" + track;
+  currentSongs.src = "http://127.0.0.1:3000/web%20development/project/Music%20player%20clone/songs/" + track;
   if(!pause){
     currentSongs.play();
     play.src = "pause.svg";
@@ -199,6 +199,7 @@ async function main() {
 }
 
 main();
+
 
 
 
