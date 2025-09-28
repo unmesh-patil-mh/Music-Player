@@ -2,6 +2,8 @@ console.log("lets start");
 let currentSongs = new Audio();
 let songs;
 
+app.use(express.static('songs'))
+
 function secondstominutes(seconds) {
   if (isNaN(seconds) || seconds < 0) {
     return "00:00";
@@ -199,6 +201,7 @@ async function main() {
 }
 
 main();
+
 
 
 
