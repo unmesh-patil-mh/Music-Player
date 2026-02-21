@@ -78,7 +78,7 @@ git clone https://github.com/your-username/music-player.git
 ![Main Interface](assets/images/landscape.png)
 
 ### 📱 Playing State
-![Playing State](assets/images/responsive 1.png)
+![Playing State](assets/images/responsive_1.png)
 
 ### 📱 Responsive Design
 ![Responsive View](assets/images/responsive2.png)
