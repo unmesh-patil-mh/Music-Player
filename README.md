@@ -75,15 +75,15 @@ git clone https://github.com/your-username/music-player.git
 
 ### 🎵 Main Player Interface
 ```markdown
-![Main Interface](assets/images/main-ui.png)
+![Main Interface](assets/images/landscape.png)
 ```
 ### ▶️ Playing State
 ```markdown
-![Playing State](assets/images/playing-ui.png)
+![Playing State](assets/images/responsive 1.png)
 ```
 ### 📱 Responsive Design
 ```markdown
-![Responsive View](assets/images/mobile-ui.png)
+![Responsive View](assets/images/responsive2.png)
 ```
 ---
 ## 💡 Future Improvements
