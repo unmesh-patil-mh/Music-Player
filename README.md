@@ -71,20 +71,17 @@ git clone https://github.com/your-username/music-player.git
 
 ## 📸 Screenshots
 
-> Add your actual screenshots inside an `assets/images/` folder and update the paths below.
+
+## 📸 Screenshots
 
 ### 🎵 Main Player Interface
-```markdown
 ![Main Interface](assets/images/landscape.png)
-```
-### ▶️ Playing State
-```markdown
+
+### 📱 Playing State
 ![Playing State](assets/images/responsive 1.png)
-```
+
 ### 📱 Responsive Design
-```markdown
 ![Responsive View](assets/images/responsive2.png)
-```
 ---
 ## 💡 Future Improvements
 - Playlist Feature  
