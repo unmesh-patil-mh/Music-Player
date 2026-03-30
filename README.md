@@ -71,9 +71,6 @@ git clone https://github.com/your-username/music-player.git
 
 ## 📸 Screenshots
 
-
-## 📸 Screenshots
-
 ### 🎵 Main Player Interface
 ![Main Interface](assets/images/landscape.png)
 
